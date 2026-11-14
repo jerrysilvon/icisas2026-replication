@@ -1,0 +1,144 @@
+{
+  "generated": "2026-09-12T15:31:05.354961+00:00",
+  "eta_rt": 0.85,
+  "censoring": [
+    {
+      "regime": "A",
+      "cap": 20000.0,
+      "hours": 10896,
+      "pct_at_cap": 0.4405286343612335,
+      "mean": 4256.674509911894,
+      "p99": 18720.488999999976
+    },
+    {
+      "regime": "B",
+      "cap": 12000.0,
+      "hours": 8664,
+      "pct_at_cap": 12.396121883656509,
+      "mean": 5922.403968144044,
+      "p99": 12000.0
+    },
+    {
+      "regime": "C",
+      "cap": 10000.0,
+      "hours": 3720,
+      "pct_at_cap": 19.193548387096772,
+      "mean": 5385.511473118279,
+      "p99": 10000.0
+    }
+  ],
+  "counterfactual": [
+    {
+      "duration_h": 2,
+      "cap_20000": {
+        "annual_rs_per_mw": 3582909.9573953743,
+        "pct_of_uncapped": 100.0,
+        "days_dispatched": 454,
+        "ordering_feasible_pct": 100.0
+      },
+      "cap_12000": {
+        "annual_rs_per_mw": 3068566.5843281937,
+        "pct_of_uncapped": 85.64453533068728,
+        "days_dispatched": 449,
+        "ordering_feasible_pct": 100.0
+      },
+      "cap_10000": {
+        "annual_rs_per_mw": 2834728.247367841,
+        "pct_of_uncapped": 79.11804318489126,
+        "days_dispatched": 447,
+        "ordering_feasible_pct": 100.0
+      },
+      "cap_8000": {
+        "annual_rs_per_mw": 2530809.669218062,
+        "pct_of_uncapped": 70.63559227868106,
+        "days_dispatched": 443,
+        "ordering_feasible_pct": 100.0
+      }
+    },
+    {
+      "duration_h": 4,
+      "cap_20000": {
+        "annual_rs_per_mw": 5246428.360594713,
+        "pct_of_uncapped": 100.0,
+        "days_dispatched": 454,
+        "ordering_feasible_pct": 100.0
+      },
+      "cap_12000": {
+        "annual_rs_per_mw": 4588236.074427312,
+        "pct_of_uncapped": 87.45446919449043,
+        "days_dispatched": 449,
+        "ordering_feasible_pct": 100.0
+      },
+      "cap_10000": {
+        "annual_rs_per_mw": 4272913.144840309,
+        "pct_of_uncapped": 81.44422931481618,
+        "days_dispatched": 447,
+        "ordering_feasible_pct": 100.0
+      },
+      "cap_8000": {
+        "annual_rs_per_mw": 3846747.071932819,
+        "pct_of_uncapped": 73.32125414739807,
+        "days_dispatched": 443,
+        "ordering_feasible_pct": 100.0
+      }
+    }
+  ],
+  "realised": [
+    {
+      "regime": "A",
+      "duration_h": 2,
+      "annual_rs_per_mw": 3582909.9573953743,
+      "days": 454
+    },
+    {
+      "regime": "A",
+      "duration_h": 4,
+      "annual_rs_per_mw": 5246428.360594713,
+      "days": 454
+    },
+    {
+      "regime": "B",
+      "duration_h": 2,
+      "annual_rs_per_mw": 4778329.21213989,
+      "days": 361
+    },
+    {
+      "regime": "B",
+      "duration_h": 4,
+      "annual_rs_per_mw": 7572057.281662051,
+      "days": 361
+    },
+    {
+      "regime": "C",
+      "duration_h": 2,
+      "annual_rs_per_mw": 3512762.4608064517,
+      "days": 155
+    },
+    {
+      "regime": "C",
+      "duration_h": 4,
+      "annual_rs_per_mw": 6356125.076854838,
+      "days": 155
+    }
+  ],
+  "month_matched": [
+    {
+      "regime": "A",
+      "annual_rs_per_mw": 3492046.601964285,
+      "days": 154,
+      "mean_price": 3588.5393966450215
+    },
+    {
+      "regime": "B",
+      "annual_rs_per_mw": 7001247.463741721,
+      "days": 151,
+      "mean_price": 6707.715921633554
+    },
+    {
+      "regime": "C",
+      "annual_rs_per_mw": 6378928.279166666,
+      "days": 153,
+      "mean_price": 5393.264893790849
+    }
+  ]
+}

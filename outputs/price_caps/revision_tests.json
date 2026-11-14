@@ -1,0 +1,795 @@
+{
+  "base_series": {
+    "hours": 10896,
+    "days": 454,
+    "mean_price": 4256.674509911894
+  },
+  "degradation": [
+    {
+      "duration_h": 2,
+      "deg_cost": 0,
+      "cap": 20000,
+      "annual_rs_per_mw": 3582909.9573953743,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 0,
+      "cap": 12000,
+      "annual_rs_per_mw": 3068566.584328194,
+      "removed_pct": 14.355464669312711,
+      "pct_of_uncapped": 85.64453533068729
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 0,
+      "cap": 10000,
+      "annual_rs_per_mw": 2834728.247367841,
+      "removed_pct": 20.881956815108737,
+      "pct_of_uncapped": 79.11804318489125
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 0,
+      "cap": 8000,
+      "annual_rs_per_mw": 2530809.669218062,
+      "removed_pct": 29.36440772131894,
+      "pct_of_uncapped": 70.63559227868106
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 50,
+      "cap": 20000,
+      "annual_rs_per_mw": 3518838.940335903,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 99.99999999999999
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 50,
+      "cap": 12000,
+      "annual_rs_per_mw": 3005916.481316079,
+      "removed_pct": 14.576468764747187,
+      "pct_of_uncapped": 85.42353123525281
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 50,
+      "cap": 10000,
+      "annual_rs_per_mw": 2772882.1091134357,
+      "removed_pct": 21.19894783110645,
+      "pct_of_uncapped": 78.80105216889355
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 50,
+      "cap": 8000,
+      "annual_rs_per_mw": 2470008.6851486783,
+      "removed_pct": 29.806145520462636,
+      "pct_of_uncapped": 70.19385447953736
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 100,
+      "cap": 20000,
+      "annual_rs_per_mw": 3455741.345313876,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 99.99999999999999
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 100,
+      "cap": 12000,
+      "annual_rs_per_mw": 2944259.0605231277,
+      "removed_pct": 14.800942364634405,
+      "pct_of_uncapped": 85.1990576353656
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 100,
+      "cap": 10000,
+      "annual_rs_per_mw": 2711995.41717511,
+      "removed_pct": 21.522036918281383,
+      "pct_of_uncapped": 78.47796308171863
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 100,
+      "cap": 8000,
+      "annual_rs_per_mw": 2410167.1473953743,
+      "removed_pct": 30.256147478639928,
+      "pct_of_uncapped": 69.74385252136007
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 200,
+      "cap": 20000,
+      "annual_rs_per_mw": 3331848.9113270924,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 200,
+      "cap": 12000,
+      "annual_rs_per_mw": 2823346.1681662994,
+      "removed_pct": 15.261878815454866,
+      "pct_of_uncapped": 84.73812118454514
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 200,
+      "cap": 10000,
+      "annual_rs_per_mw": 2592600.49871696,
+      "removed_pct": 22.187332987908082,
+      "pct_of_uncapped": 77.81266701209192
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 200,
+      "cap": 8000,
+      "annual_rs_per_mw": 2292957.3488711454,
+      "removed_pct": 31.180632438766597,
+      "pct_of_uncapped": 68.8193675612334
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 250,
+      "cap": 20000,
+      "annual_rs_per_mw": 3271017.7580781938,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 250,
+      "cap": 12000,
+      "annual_rs_per_mw": 2764032.4067455945,
+      "removed_pct": 15.499315162093952,
+      "pct_of_uncapped": 84.50068483790605
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 250,
+      "cap": 10000,
+      "annual_rs_per_mw": 2534010.3055781936,
+      "removed_pct": 22.53144149645372,
+      "pct_of_uncapped": 77.46855850354629
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 250,
+      "cap": 8000,
+      "annual_rs_per_mw": 2235532.9046310573,
+      "removed_pct": 31.65635071499918,
+      "pct_of_uncapped": 68.34364928500082
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 350,
+      "cap": 20000,
+      "annual_rs_per_mw": 3151527.1227918505,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 350,
+      "cap": 12000,
+      "annual_rs_per_mw": 2647590.066145374,
+      "removed_pct": 15.990249711068728,
+      "pct_of_uncapped": 84.00975028893127
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 350,
+      "cap": 10000,
+      "annual_rs_per_mw": 2419005.5906387665,
+      "removed_pct": 23.24338340150991,
+      "pct_of_uncapped": 76.75661659849008
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 350,
+      "cap": 8000,
+      "annual_rs_per_mw": 2122824.605280837,
+      "removed_pct": 32.641398199350235,
+      "pct_of_uncapped": 67.35860180064977
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 500,
+      "cap": 20000,
+      "annual_rs_per_mw": 2978313.114322687,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 99.99999999999999
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 500,
+      "cap": 12000,
+      "annual_rs_per_mw": 2478898.1455837004,
+      "removed_pct": 16.76838363089843,
+      "pct_of_uncapped": 83.23161636910157
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 500,
+      "cap": 10000,
+      "annual_rs_per_mw": 2252529.693612335,
+      "removed_pct": 24.368942849563556,
+      "pct_of_uncapped": 75.63105715043643
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 500,
+      "cap": 8000,
+      "annual_rs_per_mw": 1959716.879212555,
+      "removed_pct": 34.200441525496764,
+      "pct_of_uncapped": 65.79955847450324
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 1000,
+      "cap": 20000,
+      "annual_rs_per_mw": 2452605.753672907,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 1000,
+      "cap": 12000,
+      "annual_rs_per_mw": 1968047.5720814976,
+      "removed_pct": 19.756872088624846,
+      "pct_of_uncapped": 80.24312791137515
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 1000,
+      "cap": 10000,
+      "annual_rs_per_mw": 1748847.4226431716,
+      "removed_pct": 28.694311345222122,
+      "pct_of_uncapped": 71.30568865477788
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 1000,
+      "cap": 8000,
+      "annual_rs_per_mw": 1467459.1066354625,
+      "removed_pct": 40.16734632388982,
+      "pct_of_uncapped": 59.83265367611019
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 1500,
+      "cap": 20000,
+      "annual_rs_per_mw": 2011536.0992511013,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 1500,
+      "cap": 12000,
+      "annual_rs_per_mw": 1541407.4988381057,
+      "removed_pct": 23.371621348879856,
+      "pct_of_uncapped": 76.62837865112014
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 1500,
+      "cap": 10000,
+      "annual_rs_per_mw": 1329609.8601321585,
+      "removed_pct": 33.90077062861687,
+      "pct_of_uncapped": 66.09922937138313
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 1500,
+      "cap": 8000,
+      "annual_rs_per_mw": 1059820.731596916,
+      "removed_pct": 47.31286542699933,
+      "pct_of_uncapped": 52.68713457300067
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 2000,
+      "cap": 20000,
+      "annual_rs_per_mw": 1659391.6319988987,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 2000,
+      "cap": 12000,
+      "annual_rs_per_mw": 1202253.1721530834,
+      "removed_pct": 27.548557617778723,
+      "pct_of_uncapped": 72.45144238222127
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 2000,
+      "cap": 10000,
+      "annual_rs_per_mw": 996987.4351651982,
+      "removed_pct": 39.91849687923099,
+      "pct_of_uncapped": 60.081503120769014
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 2000,
+      "cap": 8000,
+      "annual_rs_per_mw": 736758.6294273128,
+      "removed_pct": 55.600678271481016,
+      "pct_of_uncapped": 44.399321728518984
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 3000,
+      "cap": 20000,
+      "annual_rs_per_mw": 1144364.6428744493,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 3000,
+      "cap": 12000,
+      "annual_rs_per_mw": 711665.1563931718,
+      "removed_pct": 37.81132955964194,
+      "pct_of_uncapped": 62.18867044035806
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 3000,
+      "cap": 10000,
+      "annual_rs_per_mw": 524474.5068226872,
+      "removed_pct": 54.168934693290026,
+      "pct_of_uncapped": 45.831065306709974
+    },
+    {
+      "duration_h": 2,
+      "deg_cost": 3000,
+      "cap": 8000,
+      "annual_rs_per_mw": 286031.12806718063,
+      "removed_pct": 75.00524593728105,
+      "pct_of_uncapped": 24.99475406271895
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 0,
+      "cap": 20000,
+      "annual_rs_per_mw": 5246428.360594713,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 0,
+      "cap": 12000,
+      "annual_rs_per_mw": 4588236.074427312,
+      "removed_pct": 12.545530805509575,
+      "pct_of_uncapped": 87.45446919449041
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 0,
+      "cap": 10000,
+      "annual_rs_per_mw": 4272913.1448403075,
+      "removed_pct": 18.555770685183848,
+      "pct_of_uncapped": 81.44422931481614
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 0,
+      "cap": 8000,
+      "annual_rs_per_mw": 3846747.071932819,
+      "removed_pct": 26.67874585260194,
+      "pct_of_uncapped": 73.32125414739807
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 50,
+      "cap": 20000,
+      "annual_rs_per_mw": 5136533.340148678,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 50,
+      "cap": 12000,
+      "annual_rs_per_mw": 4480244.34688326,
+      "removed_pct": 12.776885689335792,
+      "pct_of_uncapped": 87.22311431066422
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 50,
+      "cap": 10000,
+      "annual_rs_per_mw": 4166087.1661949335,
+      "removed_pct": 18.89301810558588,
+      "pct_of_uncapped": 81.10698189441413
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 50,
+      "cap": 8000,
+      "annual_rs_per_mw": 3741287.8333755503,
+      "removed_pct": 27.163174350830598,
+      "pct_of_uncapped": 72.83682564916941
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 100,
+      "cap": 20000,
+      "annual_rs_per_mw": 5028750.576310572,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 100,
+      "cap": 12000,
+      "annual_rs_per_mw": 4374350.900225771,
+      "removed_pct": 13.013166315457092,
+      "pct_of_uncapped": 86.98683368454292
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 100,
+      "cap": 10000,
+      "annual_rs_per_mw": 4061359.468436123,
+      "removed_pct": 19.237206005635542,
+      "pct_of_uncapped": 80.76279399436446
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 100,
+      "cap": 8000,
+      "annual_rs_per_mw": 3637966.704118943,
+      "removed_pct": 27.656648527038328,
+      "pct_of_uncapped": 72.34335147296167
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 200,
+      "cap": 20000,
+      "annual_rs_per_mw": 4818946.006035242,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 200,
+      "cap": 12000,
+      "annual_rs_per_mw": 4168410.232813876,
+      "removed_pct": 13.499544763660687,
+      "pct_of_uncapped": 86.50045523633932
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 200,
+      "cap": 10000,
+      "annual_rs_per_mw": 3857703.88030837,
+      "removed_pct": 19.947144552419005,
+      "pct_of_uncapped": 80.052855447581
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 200,
+      "cap": 8000,
+      "annual_rs_per_mw": 3437219.804207048,
+      "removed_pct": 28.67278861596959,
+      "pct_of_uncapped": 71.3272113840304
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 250,
+      "cap": 20000,
+      "annual_rs_per_mw": 4716815.473414097,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 250,
+      "cap": 12000,
+      "annual_rs_per_mw": 4068228.8584801755,
+      "removed_pct": 13.7505191498294,
+      "pct_of_uncapped": 86.24948085017061
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 250,
+      "cap": 10000,
+      "annual_rs_per_mw": 3758607.858397577,
+      "removed_pct": 20.314714883746674,
+      "pct_of_uncapped": 79.68528511625331
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 250,
+      "cap": 8000,
+      "annual_rs_per_mw": 3339651.3153359033,
+      "removed_pct": 29.196905535958628,
+      "pct_of_uncapped": 70.80309446404137
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 350,
+      "cap": 20000,
+      "annual_rs_per_mw": 4517415.707301762,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 350,
+      "cap": 12000,
+      "annual_rs_per_mw": 3872682.426712555,
+      "removed_pct": 14.27217069146608,
+      "pct_of_uncapped": 85.72782930853391
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 350,
+      "cap": 10000,
+      "annual_rs_per_mw": 3565184.432246696,
+      "removed_pct": 21.079115511019253,
+      "pct_of_uncapped": 78.92088448898075
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 350,
+      "cap": 8000,
+      "annual_rs_per_mw": 3149490.699757709,
+      "removed_pct": 30.281140726831847,
+      "pct_of_uncapped": 69.71885927316815
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 500,
+      "cap": 20000,
+      "annual_rs_per_mw": 4231842.284410792,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 500,
+      "cap": 12000,
+      "annual_rs_per_mw": 3592736.5766354627,
+      "removed_pct": 15.102304500563724,
+      "pct_of_uncapped": 84.89769549943628
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 500,
+      "cap": 10000,
+      "annual_rs_per_mw": 3288453.9186233478,
+      "removed_pct": 22.292616368589325,
+      "pct_of_uncapped": 77.70738363141068
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 500,
+      "cap": 8000,
+      "annual_rs_per_mw": 2877980.166101321,
+      "removed_pct": 31.99226311662917,
+      "pct_of_uncapped": 68.00773688337082
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 1000,
+      "cap": 20000,
+      "annual_rs_per_mw": 3395561.331161894,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 99.99999999999999
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 1000,
+      "cap": 12000,
+      "annual_rs_per_mw": 2774529.010418502,
+      "removed_pct": 18.289533310561257,
+      "pct_of_uncapped": 81.71046668943875
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 1000,
+      "cap": 10000,
+      "annual_rs_per_mw": 2481192.3647411894,
+      "removed_pct": 26.928359621406848,
+      "pct_of_uncapped": 73.07164037859314
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 1000,
+      "cap": 8000,
+      "annual_rs_per_mw": 2088713.7879515418,
+      "removed_pct": 38.48693679060054,
+      "pct_of_uncapped": 61.51306320939947
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 1500,
+      "cap": 20000,
+      "annual_rs_per_mw": 2722994.40998348,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 1500,
+      "cap": 12000,
+      "annual_rs_per_mw": 2120771.201305066,
+      "removed_pct": 22.116211714223375,
+      "pct_of_uncapped": 77.88378828577662
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 1500,
+      "cap": 10000,
+      "annual_rs_per_mw": 1839579.6331607928,
+      "removed_pct": 32.442768651443785,
+      "pct_of_uncapped": 67.55723134855621
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 1500,
+      "cap": 8000,
+      "annual_rs_per_mw": 1464673.4937665197,
+      "removed_pct": 46.210925428399776,
+      "pct_of_uncapped": 53.78907457160023
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 2000,
+      "cap": 20000,
+      "annual_rs_per_mw": 2200536.151905286,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 2000,
+      "cap": 12000,
+      "annual_rs_per_mw": 1617652.6089207048,
+      "removed_pct": 26.488251169148224,
+      "pct_of_uncapped": 73.51174883085177
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 2000,
+      "cap": 10000,
+      "annual_rs_per_mw": 1348731.9629129956,
+      "removed_pct": 38.70893864910033,
+      "pct_of_uncapped": 61.29106135089966
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 2000,
+      "cap": 8000,
+      "annual_rs_per_mw": 988708.1212720263,
+      "removed_pct": 55.06967152455209,
+      "pct_of_uncapped": 44.9303284754479
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 3000,
+      "cap": 20000,
+      "annual_rs_per_mw": 1460271.4390033039,
+      "removed_pct": 0.0,
+      "pct_of_uncapped": 100.0
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 3000,
+      "cap": 12000,
+      "annual_rs_per_mw": 914389.9583425109,
+      "removed_pct": 37.382192521232895,
+      "pct_of_uncapped": 62.61780747876711
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 3000,
+      "cap": 10000,
+      "annual_rs_per_mw": 675382.5267566078,
+      "removed_pct": 53.7495215808929,
+      "pct_of_uncapped": 46.2504784191071
+    },
+    {
+      "duration_h": 4,
+      "deg_cost": 3000,
+      "cap": 8000,
+      "annual_rs_per_mw": 351190.90113436116,
+      "removed_pct": 75.95029994053273,
+      "pct_of_uncapped": 24.049700059467273
+    }
+  ],
+  "foresight": [
+    {
+      "duration_h": 2,
+      "cap": 20000,
+      "days": 453,
+      "perfect": 3587320.5792549667,
+      "imperfect": 3141300.999078365,
+      "capture_of_perfect_pct": 87.5667766422695,
+      "removed_perfect_pct": 0.0,
+      "removed_imperfect_pct": 0.0
+    },
+    {
+      "duration_h": 2,
+      "cap": 12000,
+      "days": 453,
+      "perfect": 3071841.7903532004,
+      "imperfect": 2727102.0250331108,
+      "capture_of_perfect_pct": 88.77742446233043,
+      "removed_perfect_pct": 14.369465385466707,
+      "removed_imperfect_pct": 13.185586932509086
+    },
+    {
+      "duration_h": 2,
+      "cap": 10000,
+      "days": 453,
+      "perfect": 2837487.25397351,
+      "imperfect": 2539753.133383001,
+      "capture_of_perfect_pct": 89.5071204223535,
+      "removed_perfect_pct": 20.90232274242928,
+      "removed_imperfect_pct": 19.14964105228546
+    },
+    {
+      "duration_h": 2,
+      "cap": 8000,
+      "days": 453,
+      "perfect": 2532897.7738852096,
+      "imperfect": 2259158.933780351,
+      "capture_of_perfect_pct": 89.19266134910093,
+      "removed_perfect_pct": 29.393046483421482,
+      "removed_imperfect_pct": 28.082061080960663
+    },
+    {
+      "duration_h": 4,
+      "cap": 20000,
+      "days": 453,
+      "perfect": 5252263.541732891,
+      "imperfect": 4706704.11982892,
+      "capture_of_perfect_pct": 89.612870383043,
+      "removed_perfect_pct": 0.0,
+      "removed_imperfect_pct": 0.0
+    },
+    {
+      "duration_h": 4,
+      "cap": 12000,
+      "days": 453,
+      "perfect": 4592618.292461368,
+      "imperfect": 4128099.2472737273,
+      "capture_of_perfect_pct": 89.88552900313675,
+      "removed_perfect_pct": 12.559256481137748,
+      "removed_imperfect_pct": 12.293206834854619
+    },
+    {
+      "duration_h": 4,
+      "cap": 10000,
+      "days": 453,
+      "perfect": 4276599.285767107,
+      "imperfect": 3878663.4551710784,
+      "capture_of_perfect_pct": 90.6950405215566,
+      "removed_perfect_pct": 18.576071977604556,
+      "removed_imperfect_pct": 17.59279197452376
+    },
+    {
+      "duration_h": 4,
+      "cap": 8000,
+      "days": 453,
+      "perfect": 3849492.4489017655,
+      "imperfect": 3507126.9066556264,
+      "capture_of_perfect_pct": 91.10621603261454,
+      "removed_perfect_pct": 26.70793423987834,
+      "removed_imperfect_pct": 25.486565176671782
+    }
+  ]
+}

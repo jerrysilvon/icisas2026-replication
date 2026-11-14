@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="249.1pt" height="187.2pt" viewBox="0 0 249.1 187.2">
+<rect width="100%" height="100%" fill="white"/>
+<line x1="49.8" y1="125.3" x2="236.7" y2="125.3" stroke="#9aa0a6" stroke-width="0.4" opacity="0.35"/>
+<line x1="49.8" y1="89.6" x2="236.7" y2="89.6" stroke="#9aa0a6" stroke-width="0.4" opacity="0.35"/>
+<line x1="49.8" y1="54.0" x2="236.7" y2="54.0" stroke="#9aa0a6" stroke-width="0.4" opacity="0.35"/>
+<line x1="86.6" y1="37.4" x2="86.6" y2="149.8" stroke="#9aa0a6" stroke-width="0.4" opacity="0.35"/>
+<line x1="157.4" y1="37.4" x2="157.4" y2="149.8" stroke="#9aa0a6" stroke-width="0.4" opacity="0.35"/>
+<line x1="228.2" y1="37.4" x2="228.2" y2="149.8" stroke="#9aa0a6" stroke-width="0.4" opacity="0.35"/>
+<clipPath id="clip3"><rect x="49.8" y="37.4" width="186.8" height="112.3"/></clipPath>
+<g clip-path="url(#clip3)">
+<polyline points="58.3,95.1 86.6,79.9 114.9,68.7 228.2,45.2" fill="none" stroke="#0b6fa4" stroke-width="1.2" stroke-linejoin="round"/><circle cx="58.3" cy="95.1" r="1.9" fill="#0b6fa4"/><circle cx="86.6" cy="79.9" r="1.9" fill="#0b6fa4"/><circle cx="114.9" cy="68.7" r="1.9" fill="#0b6fa4"/><circle cx="228.2" cy="45.2" r="1.9" fill="#0b6fa4"/>
+<polyline points="58.3,142.0 86.6,131.2 114.9,122.8 228.2,104.5" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-dasharray="4,2" stroke-linejoin="round"/><rect x="56.4" y="140.1" width="3.8" height="3.8" fill="#9aa0a6"/><rect x="84.7" y="129.3" width="3.8" height="3.8" fill="#9aa0a6"/><rect x="113.0" y="120.9" width="3.8" height="3.8" fill="#9aa0a6"/><rect x="226.3" y="102.6" width="3.8" height="3.8" fill="#9aa0a6"/>
+</g>
+<line x1="49.8" y1="149.8" x2="236.7" y2="149.8" stroke="#1a1a1a" stroke-width="0.6"/>
+<line x1="49.8" y1="37.4" x2="49.8" y2="149.8" stroke="#1a1a1a" stroke-width="0.6"/>
+<line x1="86.6" y1="149.8" x2="86.6" y2="152.3" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="86.6" y="159.8" font-size="7" text-anchor="middle" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">10</text>
+<line x1="157.4" y1="149.8" x2="157.4" y2="152.3" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="157.4" y="159.8" font-size="7" text-anchor="middle" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">15</text>
+<line x1="228.2" y1="149.8" x2="228.2" y2="152.3" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="228.2" y="159.8" font-size="7" text-anchor="middle" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">20</text>
+<line x1="47.3" y1="125.3" x2="49.8" y2="125.3" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="44.8" y="127.7" font-size="7" text-anchor="end" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">3</text>
+<line x1="47.3" y1="89.6" x2="49.8" y2="89.6" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="44.8" y="92.0" font-size="7" text-anchor="end" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">4</text>
+<line x1="47.3" y1="54.0" x2="49.8" y2="54.0" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="44.8" y="56.4" font-size="7" text-anchor="end" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">5</text>
+<text x="143.2" y="170.8" font-size="8" text-anchor="middle" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">Price ceiling (Rs/kWh)</text>
+<text transform="rotate(-90 19.8 93.6)" x="19.8" y="93.6" font-size="8" text-anchor="middle" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">Arbitrage revenue (Rs M / MW / yr)</text>
+<text x="49.8" y="31.4" font-size="8" font-weight="bold" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">Revenue falls with the ceiling</text>
+<circle cx="175.3" cy="128.8" r="2.0" fill="#0b6fa4"/>
+<text x="184.8" y="130.8" font-size="6.8" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">4-hour battery</text>
+<rect x="173.3" y="136.3" width="4.0" height="4.0" fill="#9aa0a6"/>
+<text x="184.8" y="140.3" font-size="6.8" font-family="Times New Roman, Times, DejaVu Serif, serif" fill="#1a1a1a">2-hour battery</text>
+</svg>

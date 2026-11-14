@@ -1,0 +1,618 @@
+\documentclass[conference,a4paper]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Stock Versus Flow in Supplier-Finance Disclosure:
+Programme Net Flow Carries the Forecasting Content}
+
+\author{
+\IEEEauthorblockN{AVR Akshaya}
+\IEEEauthorblockA{\textit{School of Business and Management}\\
+\textit{CHRIST (Deemed to be University)}\\
+Pune, India\\
+akshaya.avr@christuniversity.in}
+\and
+\IEEEauthorblockN{Jerry Silvon J M}
+\IEEEauthorblockA{\textit{School of Business and Management}\\
+\textit{CHRIST (Deemed to be University)}\\
+Pune, India\\
+jerry.silvon@bbabah.christuniversity.in}
+}
+
+\maketitle
+
+\begin{abstract}
+Supplier finance lets a buyer confirm an invoice, have a bank pay the supplier
+early at a discount, and settle later itself, which extends the buyer's payment
+terms using the supplier's liquidity. Until recently a reader of the accounts
+could not see it. ASU 2022-04 now requires a rollforward of confirmed
+obligations, so the gross flows through the programme are disclosed alongside
+the year-end balance. In the first mandated year 193 filers report USD 407.5 billion of obligations
+added against USD 96.0 billion outstanding at the year-end, so the balance is a
+thin summary of what moved. We ask whether the
+flows carry information the balance does not. On 230 firm-years from 167 firms,
+over a full Barth-Cram-Nelson disaggregated-accrual baseline, net programme flow
+forecasts next-year operating cash flow with a coefficient of $-0.959$
+($p = 0.001$), about 8.6\% of a standard deviation of the outcome. The
+relationship is asymmetric: net flow survives controlling for the balance
+($p = 0.025$), while the balance does not survive controlling for net flow
+($p = 0.221$). Gross throughput carries nothing, whether entered alone
+($p = 0.210$) or alongside the balance ($p = 0.986$), so the informative
+quantity is the net direction of the programme rather than its size. We test the
+result against the two mechanical explanations it invites. It is not payables
+reversal: net flow is uncorrelated with the following year's change in payables
+($r = 0.022$) and the coefficient is unmoved by controlling for it. It is not
+year-end working-capital manipulation: the effect is present among
+December-fiscal-year-end filers and stronger among the rest.
+\end{abstract}
+
+\begin{IEEEkeywords}
+supply chain finance, reverse factoring, disclosure, cash flow forecasting,
+working capital, ASU 2022-04, XBRL
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+In a supplier finance programme a buyer confirms that a supplier's invoice is
+valid, a bank pays the supplier early at a discount, and the buyer settles with
+the bank later than it would have settled with the supplier. Every party gets
+something, and the buyer's working capital improvement is funded by a discount
+the supplier absorbs.
+
+For a reader of the accounts this was, for a long time, close to invisible.
+Confirmed obligations sit in accounts payable rather than in debt, so a firm
+could extend its terms substantially without the balance sheet showing anything
+resembling borrowing. The arrangements drew regulatory attention after several
+failures in which large undisclosed programmes were found to have flattered
+working capital, and in September 2022 the Financial Accounting Standards Board
+issued ASU 2022-04, which requires disclosure of programme obligations and,
+from fiscal years beginning after 15 December 2023, a rollforward of them.
+
+The rollforward converts a stock into a flow, which is what matters here. Across
+the fiscal years beginning in 2024, the first mandated year, 193 filers report
+\textbf{USD 407.5 billion} of obligations added to their programmes against
+\textbf{USD 96.0 billion} outstanding at the year-end, and at the median firm one
+year's additions run 4.5 times the closing balance. The balance is not measuring
+scale.
+
+That raises the question this paper answers. Does the flow carry information
+about the firm's future that the balance does not? The question has a practical
+edge, since the balance was disclosable a year before the rollforward was and is
+the figure most data vendors carry, and it has an analytical one, because stock
+and flow are different objects and the literature on supplier finance has had
+access only to the stock.
+
+The question is live rather than hypothetical. Brockbank, Hill and Mutlu
+\cite{brockbank2025} examine these disclosures and find that the standard does
+not improve analysts' ability to forecast cash flows. Their account of why
+programmes are run also supplies the leading alternative explanation for our
+result, which Section~VI-E tests.
+
+We test it directly. On 230 firm-years from 167 filers, with next-year operating
+cash flow as the outcome and the Barth, Cram and Nelson disaggregated-accrual
+specification \cite{barth2001} as the baseline, net programme flow enters with a
+coefficient of $-0.959$ and a cluster-robust $p$ of 0.001. A firm whose
+programme expands on net, adding more than it settles, has weaker operating cash
+flow the following year.
+
+What makes it a finding rather than a correlation is the structure. Net flow
+keeps its significance with the year-end balance alongside it; the balance,
+marginally significant on its own, does not keep its significance with net flow
+alongside it; and gross throughput is insignificant everywhere we put it. The
+ordering is asymmetric and it runs against the stock.
+
+Three contributions follow. This is the first test of the rollforward's
+information content. The decomposition then shows that the informative quantity
+is net direction and not gross scale, which is not what a reader of the
+disclosure would guess, and we establish what the rollforward adds over
+differencing two consecutive balances.
+
+\section{Related Work}
+
+Cash flow forecasting from accrual components is a settled empirical design.
+Barth, Cram and Nelson \cite{barth2001} established that disaggregating earnings
+into cash flow and the individual accruals predicts future operating cash flow
+better than aggregate earnings does, building on the relation between earnings
+and cash flows documented by Dechow, Kothari and Watts \cite{dechow1998}. The
+accrual estimation error framework \cite{dechow2002} and the broader earnings
+quality literature \cite{dechow2010} refine what the components mean, and the
+predictive content of accruals shifts with the operating environment
+\cite{nallareddy2020}. We adopt the specification as the baseline precisely
+because it is the demanding one: a new variable that adds nothing over
+disaggregated accruals adds nothing.
+
+Supplier finance itself has been studied largely as an operations and financing
+problem, covering programme mechanics and adoption \cite{pfohl2009,
+gelsomino2016, wuttke2013, liebl2016}, the value of payment term extension to
+the buyer \cite{lekkakos2017}, and the role of factoring in financing smaller
+suppliers \cite{klapper2006}. The trade credit literature supplies the economics
+of who finances whom and at what implicit cost \cite{petersen1997,
+giannetti2011, klapper2012, murfin2015, chod2017}, and working capital behaviour
+has its own descriptive tradition \cite{hill2010}. None of it had a disclosed,
+machine-readable measure of programme activity, for the sufficient reason that
+none existed.
+
+One line of work has examined ASU 2022-04 directly. Brockbank, Hill and Mutlu
+\cite{brockbank2025} identify programme users from filing text, treat supplier
+financing as a binary indicator, and examine how the arrangements relate to
+working-capital management, reporting incentives and analysts' cash flow
+forecasts. We differ on the dimensions that matter here, in that the measure is
+the continuous net flow through the programme rather than a binary indicator,
+the source is the XBRL rollforward rather than filing text, and the outcome is
+the firm's own realised cash flow rather than analyst forecast properties. They
+are this paper's predecessor and not its rival. Their finding that programmes
+are used to manage year-end payables is also the sharpest competing account of
+our result, and Section~VI-E tests it.
+
+Mandatory disclosure changes what reaches the market and at what processing cost
+\cite{leuz2016, blankespoor2020, christensen2013}, and the off-balance-sheet
+literature shows how arrangements that are economically financing but
+presentationally something else are treated once they become visible
+\cite{altamuro2014}. Supplier finance sat in exactly that position until 2022.
+
+\section{The Disclosure}
+
+ASC 405-50 defines a supplier finance programme by three features: the buyer
+agrees with a finance provider, the buyer confirms supplier invoices as valid to
+that provider, and the supplier may then request early payment from the provider
+rather than from the buyer. The subtopic is disclosure-only. It does not tell a
+firm whether to present the obligation as trade payable or as debt, which is
+what makes a clean test of the disclosure's content possible: the standard
+changed what is visible without changing the accounting underneath.
+
+Two timing features shape any empirical design here. The balance and key terms
+became effective for fiscal years beginning after 15 December 2022 and applied
+retrospectively, whereas the rollforward became effective a year later, for
+fiscal years beginning after 15 December 2023, and applied
+\emph{prospectively}, so no retrospective activity history exists. Interim
+periods require only the balance. Annual frequency is therefore not a design
+choice on our part.
+
+\section{Data and Sample}
+
+Filings were identified by full-text search of 10-K filings for supplier finance
+terminology, yielding 551 distinct filers, and structured data was then pulled
+per company from the SEC XBRL company facts API. The activity elements are
+\texttt{SupplierFinanceProgramObligationIncrease} and
+\texttt{SupplierFinanceProgramObligationDecreaseSettlement}; the balance elements
+are \texttt{SupplierFinanceProgramObligation} and its current variant.
+
+We require both activity elements for the same annual period, since a
+rollforward needs both sides, and a small number of filers tag settlements
+without tagging annual additions. That yields \textbf{208 firms and 438 usable
+firm-years}. Requiring a filed subsequent-year operating cash flow reduces this
+to 232, and excluding financial firms following the baseline specification gives
+the estimation sample of \textbf{230 firm-years from 167 firms}.
+
+The binding constraint on sample size is filing lag rather than adoption, since
+a firm-year needs both its own rollforward and the following year's cash flow,
+and for fiscal years ending in late 2025 the following year has not been filed.
+
+Table~\ref{tab:desc} reports descriptive statistics. The row that motivates the
+paper is the contrast between gross and net: obligations added average 0.069 of
+assets while net programme flow averages 0.0011, so the gross flows are roughly
+sixty times the net at the mean. A programme moves very large volumes and nets
+to very little, which is why treating gross activity and net direction as the
+same variable would be a mistake.
+
+\begin{table}[htbp]
+\caption{Descriptive statistics}
+\label{tab:desc}
+\centering
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Variable} & \textbf{Mean} & \textbf{SD} & \textbf{Median} & \textbf{P75}\\
+\hline
+$\mathrm{OCF}_{t+1}$ & 0.1057 & 0.0750 & 0.0943 & 0.1352\\
+$\mathrm{OCF}_{t}$ & 0.1053 & 0.0652 & 0.0934 & 0.1362\\
+Programme balance & 0.0197 & 0.0392 & 0.0068 & 0.0192\\
+Obligations added & 0.0694 & 0.0818 & 0.0406 & 0.0840\\
+Obligations settled & 0.0682 & 0.0802 & 0.0385 & 0.0822\\
+Net programme flow & 0.0011 & 0.0067 & 0.0001 & 0.0021\\
+\hline
+\end{tabular}
+\end{table}
+
+All variables are scaled by average total assets and winsorised at the first and
+ninety-ninth percentiles.
+
+\section{Method}
+
+The outcome is operating cash flow in year $t+1$, scaled by average total
+assets. The baseline is the Barth-Cram-Nelson specification: current operating
+cash flow plus the disaggregated accruals, meaning the changes in receivables,
+inventory and payables, depreciation and amortisation, and other accruals
+recovered as a residual from the identity that earnings equal cash flow plus
+accruals. Financial firms are excluded, as in the original. Estimation is by OLS
+with standard errors clustered by firm, treated as asymptotically normal across
+167 clusters.
+
+We then add, in turn, the year-end programme balance; the two gross flows
+separately; their difference as a single net term; gross throughput, defined as
+the mean of additions and settlements; and combinations of these. Incremental
+content is assessed by cluster-robust Wald tests of the added terms rather than
+by the change in adjusted $R^2$, since the candidates are being asked to add to
+a specification already explaining 76.3\% of the variance.
+
+Including $\Delta$AP in the baseline is deliberate and consequential. Confirmed
+supplier finance obligations generally sit within accounts payable, so a test
+that omitted the payables accrual could recover it through the programme
+variable and report a mechanical result. With $\Delta$AP controlled, net
+programme flow correlates with it at only 0.372.
+
+\section{Results}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.86\textwidth]{figA1.pdf}
+\caption{Panel (a): obligations added during the year divided by the year-end
+balance. The median firm's additions are 4.5 times its closing balance, so the
+balance summarises a small fraction of the year's activity. Panel (b):
+added-variable plot in standard-deviation units, with both outcome and predictor
+residualised on the baseline and on the other predictor. Net programme flow
+retains a negative slope against next-year operating cash flow; the year-end
+balance is flat.}
+\label{fig:stockflow}
+\end{figure*}
+
+\subsection{Net flow forecasts, the balance does not}
+
+Table~\ref{tab:main} gives the nested specifications. The baseline reaches an
+adjusted $R^2$ of 0.7627. Adding the year-end balance alone produces a
+coefficient of $-0.124$, marginally significant at $p = 0.031$. Adding the two
+gross flows separately produces coefficients that are large, opposite in sign and
+close to equal in magnitude: additions enter at $-0.912$ and settlements at
+$+0.883$.
+
+\begin{table}[htbp]
+\caption{Incremental content over the accrual baseline}
+\label{tab:main}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Specification} & \textbf{Coef.} & \textbf{$p$} & \textbf{adj. $R^2$}\\
+\hline
+(1) Baseline & & & 0.7627\\
+(2) $+$ Balance & $-$0.124 & 0.031 & 0.7658\\
+(3) $+$ Added / Settled & $-$0.912 & 0.002 & 0.7692\\
+ & $+$0.883 & 0.003 & \\
+(4) $+$ Net flow & $-$0.959 & 0.001 & 0.7681\\
+(5) $+$ Net flow & $-$0.776 & 0.025 & 0.7684\\
+\quad\ \ and Balance & $-$0.075 & 0.221 & \\
+(6) $+$ Throughput & $-$0.043 & 0.210 & 0.7637\\
+(7) $+$ Throughput & $+$0.001 & 0.986 & 0.7648\\
+\quad\ \ and Balance & $-$0.125 & 0.128 & \\
+\hline
+\end{tabular}
+\end{table}
+
+That near-symmetry is informative rather than incidental. The restriction that
+the two coefficients sum to zero cannot be rejected ($\chi^2 = 0.742$,
+$p = 0.389$), so the two gross flows collapse to a single net term without loss.
+Estimated directly, net programme flow enters at $-0.959$ with $p = 0.001$.
+
+The magnitude is modest, which is worth stating because a coefficient near minus
+one reads as mechanical if the units are left implicit. A one standard deviation
+move in net programme flow is 0.0067 of assets, so the implied effect on
+next-year operating cash flow is about 0.0064 of assets: roughly 8.6\% of a
+standard deviation of the outcome, or about 6\% of its mean. This is an
+economically sensible signal rather than a one-for-one accounting reversal.
+
+Specification (5) is the paper's central test, and it is deliberately the
+unfavourable one, since it puts the candidate variable and the incumbent in the
+same model and lets them compete. Net flow survives at $p = 0.025$. The balance
+does not, at $p = 0.221$. Run the same contest with the two gross flows in place
+of the net term and the balance does worse still, at $p = 0.618$.
+
+We state what this does and does not establish. A $p$ of 0.221 is a failure to
+reject, not a demonstration that the balance contains exactly nothing, and with
+230 observations the test is not powerful enough to prove a null. What the
+evidence establishes is an ordering: on this sample, the flow retains its
+information when the stock is present and the stock does not retain its
+information when the flow is present. That asymmetry is the result, and it is
+the sharpest claim the data supports.
+
+\subsection{Gross scale carries nothing}
+
+Gross throughput is insignificant everywhere we put it, reaching only
+$p = 0.210$ over the baseline and an essentially zero coefficient at
+$p = 0.986$ once the balance is controlled alongside it. That is worth reporting
+rather than dropping, because throughput is the proxy for programme size a
+reader of the rollforward would reach for first. Its correlation of 0.72 with
+the year-end balance is most of the explanation, since gross scale and the stock
+carry substantially the same information and neither survives the flow.
+
+\subsection{Forecasting outside the estimation sample}
+
+The preceding tests ask whether net flow adds explanatory content. Anyone
+intending to use the disclosure asks something narrower, which is whether it
+forecasts better on observations the estimator has never encountered. We answer
+that two ways, and in both the winsorising bounds derive from the training rows
+alone, so the tails of held-out observations never influence estimation.
+
+Excluding one firm at a time and predicting its firm-years from the remaining
+166, root mean squared error falls from 0.03775 to 0.03732 once net programme
+flow enters, and out-of-sample $R^2$ improves by 0.0058. Estimating instead
+across fiscal years through 2024 and predicting 2025 reproduces that direction
+on 48 held-out observations. Table~\ref{tab:oos} collects both.
+
+\begin{table}[htbp]
+\caption{Forecast accuracy outside the estimation sample}
+\label{tab:oos}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Design} & \textbf{Baseline} & \textbf{$+$ Net flow} & \textbf{Change}\\
+\hline
+Leave-one-firm-out RMSE & 0.03775 & 0.03732 & $-$1.15\%\\
+\quad out-of-sample $R^2$ & 0.7456 & 0.7514 & $+$0.0058\\
+FY2025 holdout RMSE & 0.04558 & 0.04475 & $-$1.81\%\\
+\quad out-of-sample $R^2$ & 0.6430 & 0.6558 & $+$0.0128\\
+\hline
+\end{tabular}
+\end{table}
+
+The limit of this is worth stating before anyone leans on it. A
+Diebold-Mariano comparison of squared errors averaged within firm returns
+$p = 0.342$, so an improvement of roughly one percent is not distinguishable
+from no improvement at 167 clusters. What the exercise establishes is narrower,
+and it is that the in-sample content survives the move to held-out data with its
+sign intact, which a variable contributing half a point of adjusted $R^2$ could
+easily have failed to do. A forecasting gain a practitioner could bank is not
+established here. Demonstrating one needs the second mandated year.
+
+\subsection{Influence, specification and competing controls}
+
+Three separate questions about fragility turn out to share an answer, and
+Table~\ref{tab:robust} reports them together.
+
+Does a single firm carry the result? Refitting 167 times, each time excluding a
+different firm, holds the coefficient between $-1.043$ and $-0.805$ and
+significant at five percent in every individual fit, the weakest $p$ being
+0.006. Observations prove more consequential than firms. Excluding the most
+influential by DFBETA---Fluence Energy's fiscal 2024---relocates the estimate to
+$-0.738$; that firm's own fiscal 2023 observation pulls oppositely, which is why
+excluding Fluence altogether returns $-0.818$. Magnitude proves sensitive to a
+handful of observations in a way significance does not.
+
+Does winsorising manufacture the relationship? Without winsorising the
+coefficient becomes $-1.610$, appreciably larger than the estimate we report,
+and winsorising instead at the second and ninety-eighth percentiles produces
+$-0.929$. The one-percent treatment is the conservative choice among the three.
+
+Do liquidity and financing conditions explain the relationship? Introducing
+cash, long-term debt and size leaves net programme flow between $-0.881$ and
+$-1.110$ and significant throughout. Incomplete balance-sheet elements cost the
+fully controlled specification 83 observations, and across that reduced sample
+net flow already registers $-1.164$ before a single control enters, so the
+restriction relocates the estimate further than the controls themselves. These
+are levels rather than changes, which leaves untouched the possibility that
+economic conditions move programme usage and subsequent operations together.
+
+\begin{table}[htbp]
+\caption{Net programme flow under alternative treatments}
+\label{tab:robust}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Treatment} & \textbf{$N$} & \textbf{Coef.} & \textbf{$p$}\\
+\hline
+As reported & 230 & $-$0.959 & 0.001\\
+Leave-one-firm-out, weakest of 167 & 229 & $-$0.805 & 0.006\\
+Drop most influential observation & 229 & $-$0.738 & 0.013\\
+Unwinsorised & 230 & $-$1.610 & 0.001\\
+Fiscal-year effects & 230 & $-$1.177 & 0.001\\
+$+$ cash, leverage, size & 147 & $-$1.110 & 0.032\\
+\hline
+\end{tabular}
+\end{table}
+
+Industry is the one cut this sample cannot support. Of the 230 firm-years, 170
+are manufacturers and 41 sit in wholesale or retail trade. Within manufacturing
+the estimate is $-1.748$ for SIC 30--39 against $-0.604$ for SIC 20--29, but the
+interaction across that boundary returns $p = 0.185$ and interacting net flow
+with payables intensity returns $p = 0.259$. We therefore report no industry
+variation rather than the contrast, which is inseparable from noise at 71
+observations in the smaller group.
+
+\subsection{What the rollforward adds over differencing}
+
+Net flow tracks the change in the disclosed balance at a correlation of 0.970,
+which prompts the obvious objection that two consecutive balances would give the
+same signal a year earlier. On the 209 firm-years carrying both an opening and a
+closing balance the differenced balance does carry signal, at $-0.803$
+($p = 0.012$) against net flow's $-1.053$ ($p = 0.002$), and the two are
+collinear by construction. The rollforward's advantage is availability rather
+than strength: it yields the flow from a single filing, and 9.1\% of our
+firm-years have no prior-year balance at all, which makes differencing there not
+inconvenient but impossible.
+
+\subsection{Two mechanical explanations, tested}
+
+A coefficient close to minus one on a working-capital variable invites the
+suspicion that an accounting identity is unwinding rather than a forecast being
+made. Two versions of that suspicion are worth taking seriously, and both are
+testable.
+
+The first is payables reversal. Net flow in year $t$ moves accounts payable at
+the year-$t$ balance sheet date, that balance is the opening position for the
+change in payables during $t+1$, and that change sits inside the outcome. The
+baseline controls $\Delta$AP in year $t$, which handles the contemporaneous
+channel, but not the one that runs through the following year. We recovered
+year-$t{+}1$ payables from company facts for 200 of the 230 firm-years and tested
+it directly. Net programme flow correlates with the following year's change in
+payables at $r = 0.022$. On that subsample the coefficient is $-0.885$
+($p = 0.006$); adding $\Delta$AP$_{t+1}$ as a control leaves it at $-0.892$
+($p = 0.007$); and removing the payables change from the outcome entirely leaves
+it at $-0.950$, with the standard error rising from 0.325 to 0.508 and
+significance falling to $p = 0.062$. The point estimate does not move when the
+payables channel is closed. What the identity story predicts is not what the
+data shows.
+
+The second is year-end manipulation. If programmes are used to inflate payables
+at the reporting date, as Brockbank et al. \cite{brockbank2025} document, then
+cash flow in $t$ is flattered and cash flow in $t+1$ is depressed, and our
+coefficient follows with no supply-chain economics involved. Their evidence
+locates that behaviour among firms with December fiscal year-ends, which gives a
+direct test. Splitting on year-end month, net flow enters at $-0.641$
+($p = 0.038$) among the 156 December firm-years and at $-1.868$ ($p = 0.015$)
+among the 74 others, and the interaction between net flow and a December
+indicator is insignificant ($p = 0.252$). The effect is present in both groups
+and larger outside the group where the manipulation account predicts it should
+concentrate.
+
+Neither test proves a mechanism. Together they rule out the two explanations a
+reader reaches for first.
+
+\subsection{Early adopters}
+
+Since the rollforward became compulsory only at the boundary described in
+Section~III, part of our sample is voluntary early disclosure, and firms that
+volunteer plausibly differ from those that wait. Splitting on that boundary,
+net flow enters at $-0.668$ on the 157 mandated firm-years and at $-1.195$ on
+the 73 voluntary ones.
+
+The mandated subsample alone does not reject zero ($p = 0.163$), with a standard
+error of 0.480 against 0.299 pooled. We report that plainly. The two estimates
+are not statistically distinguishable from one another ($z = 0.79$,
+$p = 0.431$), so the split gives no evidence that the pooled result is an
+artifact of early adopters; what it shows is that 157 single-year observations
+are too few to establish the effect on their own. A reader who wants it
+demonstrated on mandated filings alone will have to wait for the second mandated
+year.
+
+\section{Discussion}
+
+The economics behind the sign are not mysterious. A programme expanding on net,
+adding more confirmed obligations than it settles, is extracting more liquidity
+from its supply chain than it returns. That is a financing inflow presented
+inside working capital, and the finding is that it reverses, roughly a year
+before the cash flow arrives.
+
+The stock-versus-flow distinction matters to anyone building on this data. The
+year-end balance is a point observation of a quantity that turns over several
+times a year, and for the median firm in our sample it captures less than a
+quarter of what passed through, so two firms reporting identical balances may
+have run programmes of very different size and of opposite direction. Vendors
+and researchers carrying the balance because it arrived first are carrying the
+less informative of the two disclosed figures.
+
+For a user of the accounts the practical instruction is specific. An analyst
+building a cash flow forecast should read additions and settlements rather than
+the closing obligation, and should read their difference rather than either
+alone, because a firm whose programme is expanding is reporting operating cash
+flow that its own supply chain is funding. The magnitude is modest. A standard
+deviation of net flow maps to roughly 8.6 percent of a standard deviation of
+next year's cash flow, which tilts a forecast rather than replacing it. A credit
+analyst has the sharper use, since net flow gives the direction of a financing
+line that is unpriced, undated and absent from debt---the three properties that
+make it worth watching. For the disclosing firm the
+implication runs the other way, in that the flows now reveal what the balance
+concealed, and a programme expanded to improve a year-end figure is visible in
+the rollforward of the year it is expanded.
+
+There is a standard-setting reading as well. ASU 2022-04's stated objective is to
+let users understand the nature, activity and potential magnitude of these
+programmes, and the rollforward was the element that made activity visible. On
+this evidence the rollforward is the part of the disclosure that does the work,
+and the balance, which arrived a year earlier and imposes a lighter burden, is
+the part that does not add to it. That ordering is worth knowing before anyone
+proposes simplifying the requirement.
+
+\subsection{Limitations}
+
+The sample is one country, one standard and the disclosure's first years, and
+230 firm-years is small for this literature. Firm fixed effects are not
+estimable at this panel depth. The result is a forecasting relationship and we
+do not claim a causal channel from programme expansion to subsequent cash flow,
+since firms choose how much programme to run and the choice may respond to
+conditions that also drive next year's operations. Confirmed obligations are not
+necessarily financed obligations, because a supplier need not take the early
+payment, and the US disclosure does not separate the two.
+
+Generalisation beyond US filers is not a matter of effort. IAS 7 paragraph 44H
+requires the carrying amounts at the beginning and end of the period and the
+type and effect of non-cash changes in them, with no equivalent of the added and
+settled lines, so the quantity measured in this paper does not exist in IFRS
+disclosure and a cross-country test of it cannot presently be constructed. The
+obvious extension can be. A second mandated year roughly doubles the panel and
+brings firm fixed effects and a mandate-only test within reach, which is what
+the result now most needs, and whether market participants price the flow
+becomes answerable once forecast and rating data are matched to the rollforward.
+
+\section{Conclusion}
+
+ASU 2022-04 made the flows through supplier finance programmes visible for the
+first time, and in the first mandated year 193 filers put more than four hundred
+billion dollars of confirmed obligations through arrangements whose year-end
+footprint was a quarter of that. The flows do say something the balance does
+not. Over a full disaggregated-accrual baseline net programme flow forecasts
+next-year operating cash flow at $-0.959$, net flow survives the presence of the
+balance while the balance does not survive the presence of net flow, and gross
+throughput carries nothing.
+
+The quantity that matters is the direction a programme is moving, not its size,
+and until the rollforward was required it could not be read from the accounts at
+all.
+
+\section*{Data and Reproducibility}
+
+All filings are public. Panel construction, estimation and exhibit scripts, with
+the result artifacts behind every figure reported here, are at
+\url{https://github.com/jerrysilvon/icisas2026-replication}; the analysis makes
+no network calls once company facts are cached.
+
+\begin{thebibliography}{00}
+
+\bibitem{barth2001} M. E. Barth, D. P. Cram, and K. K. Nelson, ``Accruals and the prediction of future cash flows,'' \textit{Account. Rev.}, vol. 76, no. 1, pp. 27--58, 2001.
+
+\bibitem{dechow1998} P. M. Dechow, S. P. Kothari, and R. L. Watts, ``The relation between earnings and cash flows,'' \textit{J. Account. Econ.}, vol. 25, no. 2, pp. 133--168, 1998.
+
+\bibitem{dechow2002} P. M. Dechow and I. D. Dichev, ``The quality of accruals and earnings: The role of accrual estimation errors,'' \textit{Account. Rev.}, vol. 77, no. s-1, pp. 35--59, 2002.
+
+\bibitem{dechow2010} P. Dechow, W. Ge, and C. Schrand, ``Understanding earnings quality: A review of the proxies, their determinants and their consequences,'' \textit{J. Account. Econ.}, vol. 50, no. 2--3, pp. 344--401, 2010.
+
+\bibitem{nallareddy2020} S. Nallareddy, M. Sethuraman, and M. Venkatachalam, ``Changes in accrual properties and operating environment: Implications for cash flow predictability,'' \textit{J. Account. Econ.}, vol. 69, no. 2--3, p. 101313, 2020.
+
+\bibitem{pfohl2009} H. Pfohl and M. Gomm, ``Supply chain finance: Optimizing financial flows in supply chains,'' \textit{Logist. Res.}, vol. 1, no. 3--4, pp. 149--161, 2009.
+
+\bibitem{gelsomino2016} L. M. Gelsomino, R. Mangiaracina, A. Perego, and A. Tumino, ``Supply chain finance: A literature review,'' \textit{Int. J. Phys. Distrib. Logist. Manag.}, vol. 46, no. 4, 2016.
+
+\bibitem{wuttke2013} D. A. Wuttke, C. Blome, K. Foerstl, and M. Henke, ``Managing the innovation adoption of supply chain finance: Empirical evidence from six European case studies,'' \textit{J. Bus. Logist.}, vol. 34, no. 2, pp. 148--166, 2013.
+
+\bibitem{liebl2016} J. Liebl, E. Hartmann, and E. Feisel, ``Reverse factoring in the supply chain: Objectives, antecedents and implementation barriers,'' \textit{Int. J. Phys. Distrib. Logist. Manag.}, vol. 46, no. 4, 2016.
+
+\bibitem{lekkakos2017} S. D. Lekkakos and A. Serrano, ``Reverse factoring: A theory on the value of payment terms extension,'' \textit{Found. Trends Technol. Inf. Oper. Manag.}, vol. 10, no. 3--4, pp. 270--288, 2017.
+
+\bibitem{klapper2006} L. Klapper, ``The role of factoring for financing small and medium enterprises,'' \textit{J. Bank. Finance}, vol. 30, no. 11, pp. 3111--3130, 2006.
+
+\bibitem{petersen1997} M. A. Petersen and R. G. Rajan, ``Trade credit: Theories and evidence,'' \textit{Rev. Financ. Stud.}, vol. 10, no. 3, pp. 661--691, 1997.
+
+\bibitem{giannetti2011} M. Giannetti, M. Burkart, and T. Ellingsen, ``What you sell is what you lend? Explaining trade credit contracts,'' \textit{Rev. Financ. Stud.}, vol. 24, no. 4, pp. 1261--1298, 2011.
+
+\bibitem{klapper2012} L. Klapper, L. Laeven, and R. Rajan, ``Trade credit contracts,'' \textit{Rev. Financ. Stud.}, vol. 25, no. 3, pp. 838--867, 2012.
+
+\bibitem{murfin2015} J. Murfin and K. Njoroge, ``The implicit costs of trade credit borrowing by large firms,'' \textit{Rev. Financ. Stud.}, vol. 28, no. 1, pp. 112--145, 2015.
+
+\bibitem{chod2017} J. Chod, ``Inventory, risk shifting, and trade credit,'' \textit{Manag. Sci.}, vol. 63, no. 10, pp. 3207--3225, 2017.
+
+\bibitem{hill2010} M. D. Hill, G. W. Kelly, and M. J. Highfield, ``Net operating working capital behavior: A first look,'' \textit{Financ. Manag.}, vol. 39, no. 2, pp. 783--805, 2010.
+
+\bibitem{leuz2016} C. Leuz and P. D. Wysocki, ``The economics of disclosure and financial reporting regulation: Evidence and suggestions for future research,'' \textit{J. Account. Res.}, vol. 54, no. 2, pp. 525--622, 2016.
+
+\bibitem{blankespoor2020} E. Blankespoor, E. deHaan, and I. Marinovic, ``Disclosure processing costs, investors' information choice, and equity market outcomes: A review,'' \textit{J. Account. Econ.}, vol. 70, no. 2--3, p. 101344, 2020.
+
+\bibitem{christensen2013} H. B. Christensen, L. Hail, and C. Leuz, ``Mandatory IFRS reporting and changes in enforcement,'' \textit{J. Account. Econ.}, vol. 56, no. 2--3, pp. 147--177, 2013.
+
+\bibitem{altamuro2014} J. Altamuro, R. Johnston, S. Pandit, and H. Zhang, ``Operating leases and credit assessments,'' \textit{Contemp. Account. Res.}, vol. 31, no. 2, pp. 551--580, 2014.
+
+\bibitem{brockbank2025} B. Brockbank, M. Hill, and S. Mutlu, ``Supplier financing: Incentives, manipulation, and disclosure effects,'' working paper, Dec. 2025. [Online]. Available: https://ssrn.com/abstract=5933157
+
+\end{thebibliography}
+
+\end{document}

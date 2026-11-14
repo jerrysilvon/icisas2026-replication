@@ -1,0 +1,604 @@
+\documentclass[conference,a4paper]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Administrative Price Ceilings and the Merchant Storage Business Case:
+Evidence from India's Day-Ahead Power Exchange}
+
+\author{
+\IEEEauthorblockN{AVR Akshaya}
+\IEEEauthorblockA{\textit{School of Business and Management}\\
+\textit{CHRIST (Deemed to be University)}\\
+Pune, India\\
+akshaya.avr@christuniversity.in}
+\and
+\IEEEauthorblockN{Jerry Silvon J M}
+\IEEEauthorblockA{\textit{School of Business and Management}\\
+\textit{CHRIST (Deemed to be University)}\\
+Pune, India\\
+jerry.silvon@bbabah.christuniversity.in}
+}
+
+\maketitle
+
+\begin{abstract}
+India's Central Electricity Regulatory Commission cut the day-ahead price
+ceiling from Rs20/kWh to Rs12/kWh in April 2022 and to Rs10/kWh in April 2023.
+Industry bodies argue the ceiling suppresses the merchant case for storage, and
+a recent peer-reviewed study identifies it as a constraint, but the magnitude
+has not been measured. We measure it. Applying each ceiling to one observed
+hourly IEX series and solving the storage dispatch exactly by dynamic
+programming, a co-located four-hour battery loses 18.6\% of its arbitrage value
+between the Rs20 and Rs10 ceilings, while the capture price of the solar plant
+beside it falls 4.3\%. The asymmetry is mechanical: solar output concentrates in
+midday hours the ceiling never reaches, while a battery earns in the evening
+peak, and the Rs10 ceiling censors 5.7\% of hours in that series while removing
+close to a fifth of the arbitrage value. Because a binding ceiling censors rather
+than estimates, revenue computed on the capped series is a lower bound on
+uncapped revenue and no counterfactual price has to be invented. CERC has since
+carved storage out through a high-price segment with a Rs50 ceiling, which
+concedes the mechanism and bounds what we measure to the ordinary day-ahead
+market. A ceiling defended as consumer protection falls hardest on the
+technology that would reduce the scarcity the ceiling exists to suppress.
+\end{abstract}
+
+\begin{IEEEkeywords}
+electricity markets, price caps, battery storage, arbitrage, solar
+co-location, India, techno-economic analysis
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+A wholesale price ceiling is a blunt instrument aimed at a specific harm. When
+scarcity drives clearing prices to levels that look punitive, a regulator can cap
+them, and consumers are spared the tail. India's Central Electricity Regulatory
+Commission (CERC) did this twice in quick succession: the ceiling on the power
+exchanges fell from Rs20/kWh to Rs12/kWh on 1 April 2022, during the coal supply
+crisis, and to Rs10/kWh on 1 April 2023.
+
+That intervention's cost is not borne evenly. A battery earns by buying cheap
+and selling dear, which means that the hours generating its revenue are, by
+construction, the hours at the top of the price distribution, and a ceiling
+placed on that distribution removes them first and removes them entirely.
+
+Indian industry bodies have made this argument, and so, in a peer-reviewed
+setting co-authored from within CERC itself, have Suski et al.
+\cite{suski2026}, who conclude that storage profitability ``will further
+deteriorate if market rules constrain their movement through low price caps or
+other `remedial' regulatory measures.'' What no study we are aware of does is
+vary the ceiling and measure the value it removes. The mechanism is asserted by
+the regulator's own analysis and left unquantified, and it could be wrong in two
+ways worth checking before building on it: if the ceilings bind only rarely, or
+bind in hours when a battery would not have been discharging anyway, the effect
+on the merchant case is negligible.
+
+It is not negligible. We take the hourly Indian Energy Exchange day-ahead series
+for 2021 to 2023, apply each ceiling to the same observed prices, and solve the
+storage dispatch exactly. A four-hour battery loses \textbf{18.6\%} of its
+arbitrage value between the Rs20 and Rs10 ceilings; a two-hour battery loses
+\textbf{20.9\%}. Over the same series and the same ceilings, the capture price of
+a co-located solar plant falls \textbf{4.3\%}.
+
+That asymmetry is the paper's central result, and it is more robust than either
+number alone, because whatever one assumes about how bidding behaviour might
+respond to a different ceiling, the assumption applies to both technologies on
+the same price series and therefore cancels from the comparison. The mechanism
+is a matter of timing. Solar generates at midday, when Indian day-ahead prices
+sit near their daily low and no ceiling is within reach; a battery earns after
+sunset, in the part of the distribution a ceiling removes first.
+
+Three further results follow, and one boundary on all of them. The ceilings bind
+where it costs most: imposing Rs10 on our base series censors only 5.7\% of
+hours yet removes 18.6\% of four-hour arbitrage value. For solar, location
+matters more than the ceiling on revenue and less on the price received per
+unit, so the comparison reverses between the two, while the realised revenue
+comparison runs the other way from the counterfactual one, which is precisely
+why the fixed-series design is the identifying one. The boundary is narrower. A
+high-price segment created in February 2023 lets storage sell at a Rs50 ceiling
+(Section~\ref{sec:hpdam}), so what follows measures the ordinary day-ahead
+ceiling and not the whole regulatory constraint on merchant storage.
+
+\section{Related Work}
+
+The value of storage arbitrage in a wholesale market is a well-developed
+literature. Sioshansi et al. \cite{sioshansi2009} established the standard
+approach on PJM data, optimising dispatch under perfect foresight and reporting
+the welfare consequences; subsequent work has extended it across US real-time
+markets \cite{bradbury2014}, the Australian energy-only market
+\cite{mcconnell2015}, and European day-ahead markets at continental scale
+\cite{zafirakis2016, brijs2019, mercier2023, komorowska2024}. Methodological
+refinements have addressed degradation \cite{wankmuller2017}, dynamic efficiency
+and the choice of optimisation formulation \cite{grimaldi2024}, and the limits
+that forecast error places on realisable arbitrage \cite{antweiler2021}.
+
+Price caps have their own literature, largely concerned with resource adequacy:
+a ceiling set below the value of lost load truncates scarcity rents and produces
+the missing-money problem, so capacity mechanisms or scarcity pricing reforms are
+needed to restore the investment signal \cite{wilson2000, billimoria2019,
+papavasiliou2020, woo2019}, and caps interact with capacity payments and with
+renewable-driven volatility \cite{milstein2019, milstein2015}. This work treats
+generation adequacy in general. It does not isolate storage, and it does not
+measure what a specific ceiling removes from a specific asset.
+
+A third literature concerns the market value of variable renewables and its
+decline with penetration \cite{hirth2013, brown2021}, storage's role in that
+setting including its market power \cite{williams2022}, co-location design and
+planning \cite{park2021}, and the price behaviour of the Indian exchange
+\cite{chattopadhyay2023}.
+
+The gap this paper fills sits at the intersection. The storage arbitrage
+literature takes the price series as given and does not vary the regulatory
+ceiling, while the price cap literature treats adequacy in aggregate. Suski et
+al. \cite{suski2026} bring the two together in the Indian setting, and their
+treatment of the ceiling is the closest prior work to ours: they document that
+prices rested at the cap for more than a tenth of the hours in 2022 and 2023,
+and they name low price caps as a threat to the storage business case. Their
+object, however, is a comparison of pumped hydro, battery and run-of-river
+options, and their sensitivity analysis varies capital cost rather than the
+ceiling, which enters as an observed feature of the market and a stated risk
+rather than a quantity whose cost is measured. We vary it while holding
+everything else fixed.
+
+\section{Institutional Setting}
+
+The Indian Energy Exchange operates a day-ahead market with hourly clearing and a
+single national price in the absence of congestion. CERC sets the maximum
+clearable price administratively.
+
+During the coal supply crisis of early 2022, with exchange prices repeatedly
+touching the then-prevailing Rs20/kWh ceiling, CERC reduced the ceiling to
+Rs12/kWh with effect from 1 April 2022. A second reduction to Rs10/kWh followed
+on 1 April 2023. Both interventions were framed as protecting distribution
+utilities and, through them, consumers from extreme prices during a supply
+emergency.
+
+For a merchant storage asset these are not distributional details. The ceiling
+determines the maximum spread available on any day in this segment, and for a
+merchant battery the spread is the revenue line.
+
+\subsection{The high-price carve-out}
+\label{sec:hpdam}
+
+CERC subsequently created an exception, and it matters for how the results below
+should be read. By order of 16 February 2023 the Commission approved a High
+Price Day Ahead Market within the integrated day-ahead segment, restricted to
+high-variable-cost sellers: gas plants running on imported regasified LNG or
+naphtha, imported-coal plants, and battery energy storage systems. Its ceiling
+was Rs50/kWh against the Rs12/kWh then applying to the ordinary day-ahead
+market, and the exchange began trading it that March.
+
+Two things follow. The first is that storage was explicitly carved out, which is
+the regulator conceding the mechanism this paper measures: the ordinary ceiling
+was recognised as an obstacle for precisely the class of seller whose revenue
+comes from the upper tail. The second is a scope condition on our results. From
+March 2023 a merchant battery had a legal route to sell above the ordinary
+ceiling, so what we measure is the value the \emph{day-ahead} ceiling removes,
+not the total constraint on Indian merchant storage. We return to this in
+Section~VII.
+
+\section{Data}
+
+\subsection{Prices}
+
+Hourly IEX prices are taken from a published, citable dataset
+\cite{veeramsetty2024} released under CC BY 4.0 with a DOI, comprising 23,304
+hourly observations. We use a published dataset rather than scraping the exchange
+because it is stable, licensed and reproducible by a reviewer.
+
+The file carries no timestamp column, so the series was reconstructed and then
+validated rather than assumed. The dataset's own lagged price columns supply the
+test, the one-hour lag matching the previous row for 100.00\% of 23,303 rows and
+the 24-hour lag for 100.00\% of applicable rows, which establishes a strictly
+contiguous hourly series. The start date follows from the row count. Stated
+coverage from 1 January 2021 to 31 August 2023 contains 23,352 hours against
+23,304 rows, a difference of exactly the 48 leading hours consumed in
+constructing the 48-hour lag feature, so the series begins at 3 January 2021.
+One day, 2 April 2022, is excluded for straddling the first ceiling change.
+
+Two independent checks confirm these are day-ahead prices and that the
+reconstruction is correctly aligned. Aggregating over the Indian fiscal year
+2022--23 gives a mean of Rs5.94/kWh, matching the published IEX day-ahead average
+for that year exactly; a misaligned reconstruction would shift the fiscal window
+and break the match. Second, the series reproduces the CERC interventions
+unaided. The maximum price is Rs20,000/MWh until the delivery hour of
+1 April 2022, Rs12,000/MWh through to March 2023, and Rs10,000/MWh thereafter.
+The ceilings appear at the right values, in the right order, on the right dates.
+
+\subsection{Solar}
+
+Hourly solar output is from PVGIS v5.3 \cite{pvgis}, the European Commission
+Joint Research Centre's satellite-derived irradiance service, for 2021 to 2023 at
+1 kWp with 14\% system loss. Eight sites were selected to span India's solar
+geography: Jaisalmer, Bhadla and Jodhpur in Rajasthan, Bhuj in Gujarat, Pavagada
+and Bengaluru in Karnataka, Kurnool in Andhra Pradesh, and Nagpur in
+Maharashtra. Mean annual yield ranges from 1,212 to 1,407 kWh/kWp.
+
+\section{Method}
+
+\subsection{Identification}
+
+The obvious objection to any study of a price ceiling is that the counterfactual
+uncapped price is unknowable. We do not estimate one.
+
+A binding ceiling is a censoring event. In an hour that clears at the cap, the
+true market-clearing price was at least the cap and possibly far above it, which
+means that arbitrage revenue computed on a capped series is a \emph{lower bound}
+on the revenue the same asset would have earned without the cap. The quantity we
+report is therefore bounded from below by construction, and the bound tightens
+rather than loosens as the ceiling binds more often.
+
+The bound is conditional. It holds only if offer behaviour is invariant to the
+ceiling, and the condition belongs here rather than among the limitations,
+because should a lower ceiling change how participants bid, prices in hours that
+never touch the cap move as well and censoring no longer isolates the ceiling
+from anything else. Our design cannot test this: holding the series fixed is
+what buys the bound in the first place. The direction of any such effect is not
+obvious either, since a ceiling removing the top of the distribution weakens the
+incentive to bid into it at all.
+
+Regime boundaries are assigned from the series rather than from the order dates,
+each regime beginning on the first day after which its ceiling is never exceeded.
+This places the A/B boundary at 1 April 2022 and the B/C boundary at 30 March
+2023, both within a day of CERC's interventions, and yields 10,896, 8,664 and
+3,720 hours respectively. Two transition days fall between regimes and are
+excluded.
+
+The comparison is run on a single observed series. Regime A, the period before
+April 2022, is the least censored series available, with the ceiling binding in
+0.44\% of hours. We apply each candidate ceiling to that same series, so the
+ceiling is the only quantity that differs between columns and no other market
+condition moves with it.
+
+\subsection{Dispatch}
+
+Storage dispatch is solved exactly, by dynamic programming over state of charge,
+under price-taking perfect foresight on a daily horizon, with power of 1 MW,
+energy of 2 or 4 MWh, round-trip efficiency of 85\%, and the battery beginning
+and ending each day empty. Multiple cycles per day are permitted where
+profitable. Every schedule reported is chronologically feasible, which we verify
+rather than assume: the check passes for 100\% of dispatched days.
+
+Perfect foresight yields an upper bound on realisable arbitrage, which is the
+convention in this literature \cite{sioshansi2009, antweiler2021}. Since our
+object is a ratio between two ceilings applied to the same series and the same
+solver, the foresight assumption affects both sides equally.
+
+The daily horizon was tested against longer ones. Sioshansi et al. optimise two
+weeks at a time, which by their account admits both intra-day and inter-day
+arbitrage, including heavier charging at weekends. Extending our horizon to a
+week or a fortnight raises four-hour revenue by about 2\%, from Rs5.246M to
+Rs5.371M per MW-year, and moves the value removed at the Rs10 ceiling from
+18.6\% to 19.2\%. The result is not an artifact of horizon choice, and the daily
+horizon is the conservative option.
+
+Our round-trip efficiency of 85\% is higher than the 80\% Sioshansi et al.
+assume, reflecting lithium-ion rather than the pumped hydro of their benchmark.
+A higher efficiency raises the level of arbitrage revenue on both sides of every
+comparison we report, and the quantity of interest here is the ratio between
+ceilings rather than the level.
+
+\subsection{Solar capture}
+
+Solar capture price is the generation-weighted mean price received, computed
+hourly for each site under each ceiling. The capture ratio is that price divided
+by the simple time-weighted mean.
+
+\section{Results}
+\label{sec:results}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.85\textwidth]{figB1.pdf}
+\caption{Panel (a): price duration curves by ceiling regime. The flat upper
+segments under the Rs12 and Rs10 ceilings are the censored hours. Panel (b):
+share of hours clearing at the ceiling, which rises from 0.44\% to 19.2\% as the
+ceiling falls.}
+\label{fig:censoring}
+\end{figure*}
+
+\subsection{The ceilings bind, and they bind in the tail}
+
+Table~\ref{tab:regimes} gives the three regimes as they appear in the data.
+Under the Rs20 ceiling the cap is nearly irrelevant, binding in 0.44\% of hours.
+Under Rs12 it binds in 12.4\%, and under Rs10 in 19.2\%, so close to one hour in
+five clears at the administrative maximum.
+
+\begin{table}[htbp]
+\caption{Price regimes and censoring}
+\label{tab:regimes}
+\centering
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Regime} & \textbf{Ceiling} & \textbf{Hours} & \textbf{Mean} & \textbf{At cap}\\
+\hline
+A & Rs20/kWh & 10,896 & Rs4.26 & 0.44\%\\
+B & Rs12/kWh & 8,664 & Rs5.92 & 12.40\%\\
+C & Rs10/kWh & 3,720 & Rs5.39 & 19.19\%\\
+\hline
+\end{tabular}
+\end{table}
+
+In both tighter regimes the 99th percentile of the price distribution equals the
+ceiling exactly, against Rs18.72 under the Rs20 ceiling. This follows
+mechanically once the censored share passes one percent and is reported as a
+description of the shape rather than as independent evidence: above the
+99th percentile there is no variation left to price, and the censoring falls on
+exactly the hours a battery exists to sell into.
+
+\subsection{Value removed from storage}
+
+Table~\ref{tab:removed} reports arbitrage revenue under each ceiling applied to
+the regime A series. A four-hour battery earns Rs5.246M per MW-year under the
+Rs20 ceiling and Rs4.273M under Rs10, which is a loss of 18.6\%, while a
+two-hour battery gives up 20.9\% across the same range. The shorter duration
+loses proportionally more. Its revenue is concentrated in fewer and
+higher-priced hours, so truncating the top of the distribution takes a larger
+share of it.
+
+\begin{table}[htbp]
+\caption{Arbitrage value removed by the ceiling, regime A series}
+\label{tab:removed}
+\centering
+\begin{tabular}{lrrrrr}
+\hline
+& \textbf{Hours} & \multicolumn{2}{c}{\textbf{2-hour}} & \multicolumn{2}{c}{\textbf{4-hour}}\\
+\textbf{Ceiling} & censored & Rs M & removed & Rs M & removed\\
+\hline
+Rs20 & 0.44\% & 3.583 & 0.0\% & 5.246 & 0.0\%\\
+Rs12 & 4.24\% & 3.069 & 14.4\% & 4.588 & 12.5\%\\
+Rs10 & 5.69\% & 2.835 & 20.9\% & 4.273 & 18.6\%\\
+Rs8 & 8.03\% & 2.531 & 29.4\% & 3.847 & 26.7\%\\
+\hline
+\end{tabular}
+\end{table}
+
+The censored column is important for reading the rest of the table correctly.
+Applying the Rs10 ceiling to the regime A series censors 5.69\% of hours, not the
+19.2\% observed under the realised Rs10 regime in Table~\ref{tab:regimes}. These
+are different quantities. One is the effect of a ceiling on a given price
+series; the other is what happened when a tighter ceiling met a market whose
+underlying volatility had risen, and a battery loses close to a fifth of its
+arbitrage value to a ceiling binding in about one hour in eighteen because the
+hours it binds in are the ones that matter most.
+
+We include a hypothetical Rs8 ceiling because the direction of Indian policy over
+the sample period was downward, and because the relationship is visibly convex,
+in Table~\ref{tab:removed}: each successive reduction removes more value
+than the one before it.
+
+
+\subsection{The asymmetry with solar}
+
+Under the same series and the same ceilings, solar capture price falls from
+Rs4.89/kWh to Rs4.68/kWh, a decline of 4.3\%. The capture ratio sits between 0.95
+and 0.98 throughout, meaning Indian merchant solar in this window received
+close to the flat time-weighted average price.
+
+Between the same two ceilings, then, a four-hour battery gives up roughly four
+times what the solar plant beside it gives up. No modelling is required to see why: solar output is concentrated in the middle
+of the day, Indian day-ahead prices are at their lowest in exactly those hours,
+and the ceiling never comes close to binding on them, whereas a battery earns
+its revenue after sunset, in the evening peak, which is the part of the
+distribution the ceiling was designed to remove.
+
+Across the eight sites, mean capture price varies by 2.3\%, against the 4.3\%
+the ceiling moves it. That comparison does not survive restatement as revenue,
+since it holds output fixed while annual yield ranges from 1,212 to 1,407
+kWh/kWp across the same sites, and revenue is yield multiplied by capture price.
+On revenue the ordering reverses: moving between these sites is worth 12.6\%
+against the ceiling's 4.3\%, so location dominates by roughly three to one, and
+the useful statement is therefore the narrow one, that the ceiling is the larger
+influence on what a solar plant is paid per unit sold while location remains the
+larger influence on what it earns. For storage the distinction does not arise.
+Arbitrage value depends on the shape of the price distribution rather than on
+any generation profile of its own.
+
+\subsection{Realised revenue runs the other way}
+
+The counterfactual comparison and the realised one point in opposite directions,
+and we report this because it is the most obvious way the result could be
+misread.
+
+Measured on the prices that actually obtained in each regime, a four-hour
+battery earned Rs5.246M per MW-year in regime A, Rs7.572M in regime B and
+Rs6.356M in regime C. Realised revenue was \emph{higher} under the tighter
+ceilings. The explanation is the coal supply crisis, since through 2022 the
+level and volatility of Indian day-ahead prices rose considerably further than
+the ceiling removed, and restricting to the matched months of April to August
+preserves that ordering.
+
+This does not contradict the counterfactual result. It is why the counterfactual
+design is necessary, since comparing regimes as they occurred confounds the
+ceiling with everything else that changed in the Indian power system between
+2021 and 2023, whereas holding the price series fixed and varying only the
+ceiling isolates it. The realised series misleads. A reader taking it at face
+value would conclude that tightening the cap raised storage revenue, an artifact
+of the fuel crisis and not a property of price ceilings.
+
+\subsection{Degradation and forecast error}
+
+Two assumptions in the dispatch carry real weight, and both can be measured
+rather than argued.
+
+The first concerns profit. We report gross arbitrage revenue, whereas a battery
+that cycles pays for the cycling. Rather than importing a degradation cost from
+another market, we sweep one through the optimisation, charging it against every
+MWh discharged. In rupees the ceiling becomes cheaper as cycling becomes dearer,
+taking Rs0.974M per MW-year at zero cost against Rs0.852M at Rs2,000/MWh,
+because an expensive cycle is one the battery declines to run: daily cycling
+falls from 6.09 to 5.07 under the Rs20 ceiling across that range. As a
+proportion, which is how we report it, the quantity moves the opposite way.
+Table~\ref{tab:deg} gives the sweep. At Rs500/MWh---roughly an eighth of this
+series' mean price---the Rs10 ceiling takes 22.3\% of four-hour arbitrage value
+against 18.6\% with no cycling charge, and by Rs2,000/MWh it takes 38.7\%. The
+compressions multiply. A ceiling narrows the spread a battery earns upon, and a
+fixed charge against throughput then consumes a larger share of whatever
+survives, which leaves our headline proportion conservative with respect to
+degradation rather than generous.
+
+\begin{table}[htbp]
+\caption{Arbitrage value net of a marginal cycling cost, four-hour battery,
+regime A series, Rs M per MW-year}
+\label{tab:deg}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Cost, Rs/MWh discharged} & \textbf{Rs20} & \textbf{Rs10} & \textbf{Removed}\\
+\hline
+0 & 5.246 & 4.273 & 18.6\%\\
+500 & 4.232 & 3.289 & 22.3\%\\
+1,000 & 3.396 & 2.481 & 26.9\%\\
+2,000 & 2.201 & 1.349 & 38.7\%\\
+\hline
+\end{tabular}
+\end{table}
+
+The second is perfect foresight. We re-solve the dispatch against a forecast an
+operator could genuinely have held, taking the previous day's realised prices as
+the curve, committing to the resulting schedule, and settling it at whatever
+prices then obtained, with the same ceiling imposed on forecast and settlement
+alike. Across the 453 days carrying a predecessor that operator captures 89.6\%
+of perfect-foresight revenue with a four-hour battery and 87.6\% with a two-hour
+one. The ratio barely moves. What the Rs10 ceiling withdraws goes from 18.6\% to
+17.6\% for the four-hour battery and from 20.9\% to 19.1\% for the two-hour, so
+forecast error costs roughly a tenth of the level against a single point of the
+ratio. That ordering is what the design predicts, since both scenarios share a
+forecast of identical quality and the error very largely divides out.
+
+\section{Discussion}
+
+Instrument and target are misaligned here in a way this measurement makes
+specific. A price ceiling exists to suppress scarcity prices. Storage reduces
+scarcity directly, by moving energy out of surplus hours and into the hours when
+the system is short, which is the same thing as flattening the price
+distribution the ceiling is there to truncate. The ceiling removes 18.6\% of the
+revenue of the asset that would do this, and 4.3\% of the revenue of the asset
+that would not. The intervention falls hardest on the one technology---the
+flexible one---whose deployment would make the intervention less necessary.
+
+This is not an argument that the ceilings were wrong. A regulator facing a
+supply emergency with distribution utilities in financial distress works on a
+shorter timescale than storage investment. It is an argument that the
+instrument's cost has a specific incidence, unquantified until now, and that
+CERC's own high-price carve-out acknowledges exactly that.
+
+Magnitudes of this size matter to an investment case. A four-hour merchant
+battery in India surrenders close to a fifth of its arbitrage revenue to a
+parameter that is set administratively, was revised twice inside two years, and
+sits on the revenue line rather than the cost line, where it is correspondingly
+difficult to hedge and to finance against. The convexity compounds it, since the
+move from Rs12 to Rs10 removed more value than the larger move from Rs20 to
+Rs12. Any jurisdiction weighing a ceiling against a storage deployment target is
+choosing between them to a degree this measurement makes quantitative, and the
+generalisable instruction is to price that trade rather than to assume the two
+policies are independent.
+
+\subsection{Limitations}
+
+We report gross arbitrage revenue rather than profit, and Section~VI-E measures
+what cycling cost does to that \cite{wankmuller2017}. The rupees removed fall as
+cycling grows dearer while the share removed rises, so the percentages reported
+here are a lower bound on the proportional profit impact, as they are again for
+the censoring reason given in Section~V-A. We also model the day-ahead segment
+alone. A real Indian battery earns across day-ahead, real-time, ancillary
+services and contracted capacity, so the share of total revenue exposed to this
+particular ceiling is smaller than the share of day-ahead revenue, and two
+further simplifications work in the same conservative direction, since a market
+clearing at the ceiling is rationed and a battery bidding there may not be fully
+dispatched, whereas our solver assumes it is.
+
+The sample runs to August 2023 and covers one exchange and one market design.
+The lower-bound argument establishes that the value removed is at least what we
+report, but not how much more it might be, since that would require knowing how
+high uncapped prices would have gone. A deeper limit sits behind that one.
+Bidding behaviour under a different ceiling may itself differ, which our design
+holds fixed by construction and cannot test, and lifting that restriction needs
+a structural model of offer behaviour rather than additional data. Two
+extensions are straightforward by comparison: participation across real-time,
+ancillary and contracted segments alters a battery's exposure to any single
+ceiling, and the Rs50 segment has accumulated enough history to be measured
+rather than described.
+
+\section{Conclusion}
+
+India's day-ahead price ceiling fell from Rs20/kWh to Rs10/kWh across two
+interventions inside our sample. Applying each ceiling to a single observed price
+series and solving storage dispatch exactly, the ceiling removes 18.6\% of the
+arbitrage value of a four-hour battery and 4.3\% of the capture value of the
+solar plant co-located with it. Neither figure is an artifact of the modelling
+choices that produce it: a marginal cycling cost raises the share removed rather
+than lowering it, and an operator dispatching against the previous day's prices
+loses about a tenth of the level while the ratio between ceilings moves by a
+single point.
+
+The claim that price ceilings constrain the merchant storage case has been made
+repeatedly by industry and identified in the literature. It is correct, and the
+magnitude is now measured: close to a fifth of arbitrage revenue between the
+ceilings India actually set, concentrated on the technology whose deployment
+would reduce the scarcity that motivated the ceiling originally.
+
+\section*{Data and Reproducibility}
+
+The price dataset \cite{veeramsetty2024} is public under CC BY 4.0 and the solar
+service \cite{pvgis} is open. Dispatch and analysis scripts, with the artifacts
+behind every figure, are at
+\url{https://github.com/jerrysilvon/icisas2026-replication}.
+
+\begin{thebibliography}{00}
+
+\bibitem{sioshansi2009} R. Sioshansi, P. Denholm, T. Jenkin, and J. Weiss, ``Estimating the value of electricity storage in PJM: Arbitrage and some welfare effects,'' \textit{Energy Econ.}, vol. 31, no. 2, pp. 269--277, 2009.
+
+\bibitem{bradbury2014} K. Bradbury, L. Pratson, and D. Pati\~no-Echeverri, ``Economic viability of energy storage systems based on price arbitrage potential in real-time U.S. electricity markets,'' \textit{Appl. Energy}, vol. 114, pp. 512--519, 2014.
+
+\bibitem{mcconnell2015} D. McConnell, T. Forcey, and M. Sandiford, ``Estimating the value of electricity storage in an energy-only wholesale market,'' \textit{Appl. Energy}, vol. 159, pp. 422--432, 2015.
+
+\bibitem{zafirakis2016} D. Zafirakis, K. J. Chalvatzis, G. Baiocchi, and G. Daskalakis, ``The value of arbitrage for energy storage: Evidence from European electricity markets,'' \textit{Appl. Energy}, vol. 184, pp. 971--986, 2016.
+
+\bibitem{brijs2019} T. Brijs, F. Geth, C. De Jonghe, and R. Belmans, ``Quantifying electricity storage arbitrage opportunities in short-term electricity markets in the CWE region,'' \textit{J. Energy Storage}, vol. 25, p. 100899, 2019.
+
+\bibitem{mercier2023} T. Mercier, M. Olivier, and E. De Jaeger, ``The value of electricity storage arbitrage on day-ahead markets across Europe,'' \textit{Energy Econ.}, vol. 123, p. 106721, 2023.
+
+\bibitem{komorowska2024} A. Komorowska and P. Olczak, ``Economic viability of Li-ion batteries based on the price arbitrage in the European day-ahead markets,'' \textit{Energy}, vol. 290, p. 130009, 2024.
+
+\bibitem{wankmuller2017} F. Wankm\"uller, P. R. Thimmapuram, K. G. Gallagher, and A. Botterud, ``Impact of battery degradation on energy arbitrage revenue of grid-level energy storage,'' \textit{J. Energy Storage}, vol. 10, pp. 56--66, 2017.
+
+\bibitem{grimaldi2024} A. Grimaldi, F. D. Minuto, J. Brouwer, and A. Lanzini, ``Profitability of energy arbitrage net profit for grid-scale battery energy storage considering dynamic efficiency and degradation,'' \textit{J. Energy Storage}, vol. 95, p. 112380, 2024.
+
+\bibitem{antweiler2021} W. Antweiler, ``Microeconomic models of electricity storage: Price forecasting, arbitrage limits, curtailment insurance, and transmission line utilization,'' \textit{Energy Econ.}, vol. 101, p. 105390, 2021.
+
+\bibitem{wilson2000} J. F. Wilson, ``Scarcity, market power, and price caps in wholesale electric power markets,'' \textit{Electr. J.}, vol. 13, no. 9, pp. 33--46, 2000.
+
+\bibitem{billimoria2019} F. Billimoria and R. Poudineh, ``Market design for resource adequacy: A reliability insurance overlay on energy-only electricity markets,'' \textit{Util. Policy}, vol. 60, p. 100935, 2019.
+
+\bibitem{papavasiliou2020} A. Papavasiliou, ``Scarcity pricing and the missing European market for real-time reserve capacity,'' \textit{Electr. J.}, vol. 33, no. 10, p. 106863, 2020.
+
+\bibitem{woo2019} C. K. Woo, I. Milstein, A. Tishler, and J. Zarnikau, ``A wholesale electricity market design sans missing money and price manipulation,'' \textit{Energy Policy}, vol. 134, p. 110988, 2019.
+
+\bibitem{milstein2019} I. Milstein and A. Tishler, ``On the effects of capacity payments in competitive electricity markets: Capacity adequacy, price cap, and reliability,'' \textit{Energy Policy}, vol. 129, pp. 370--385, 2019.
+
+\bibitem{milstein2015} I. Milstein and A. Tishler, ``Can price volatility enhance market power? The case of renewable technologies in competitive electricity markets,'' \textit{Resour. Energy Econ.}, vol. 41, pp. 70--90, 2015.
+
+\bibitem{hirth2013} L. Hirth, ``The market value of variable renewables,'' \textit{Energy Econ.}, vol. 38, pp. 218--236, 2013.
+
+\bibitem{brown2021} T. Brown and L. Reichenberg, ``Decreasing market value of variable renewables can be avoided by policy action,'' \textit{Energy Econ.}, vol. 100, p. 105354, 2021.
+
+\bibitem{williams2022} O. Williams and R. Green, ``Electricity storage and market power,'' \textit{Energy Policy}, vol. 164, p. 112872, 2022.
+
+\bibitem{park2021} H. Park, ``A stochastic planning model for battery energy storage systems coupled with utility-scale solar photovoltaics,'' \textit{Energies}, vol. 14, no. 5, p. 1244, 2021.
+
+\bibitem{chattopadhyay2023} D. Chattopadhyay, S. K. Chatterjee, and S. K. Soonee, ``Spotlight on the spot market: A review of the Indian wholesale electricity market,'' \textit{Electr. J.}, vol. 36, no. 1, p. 107239, 2023.
+
+\bibitem{suski2026} A. Suski, I. Deleque Curiel, D. Chattopadhyay, S. Chatterjee, and D. Malovic, ``Evaluating storage profitability: A market-based comparison of hydro and battery options in India,'' \textit{J. Energy Storage}, vol. 144, p. 119803, 2026.
+
+\bibitem{veeramsetty2024} V. Veeramsetty, S. R. Salkuti, B. Nikitha, and T. Siddartha, ``Electrical energy price dataset: IEX data,'' Mendeley Data, V1, 2024, doi: 10.17632/v5znbkzjd4.1.
+
+\bibitem{pvgis} European Commission Joint Research Centre, ``Photovoltaic Geographical Information System (PVGIS), v5.3,'' 2024.
+
+\end{thebibliography}
+
+\end{document}
