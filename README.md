@@ -4,6 +4,9 @@ Data, analysis code and exhibits for two papers submitted to the 3rd
 International Conference on Innovation, Sustainability and Applied Sciences
 (ICISAS 2026), Curtin University Dubai, 12–13 December 2026.
 
+AVR Akshaya and Jerry Silvon J M, School of Business and Management,
+CHRIST (Deemed to be University), Pune, India.
+
 **A. Stock Versus Flow in Supplier-Finance Disclosure: Programme Net Flow
 Carries the Forecasting Content.** Does the ASU 2022-04 rollforward carry
 information the year-end balance does not? 230 firm-years from 167 US filers,
